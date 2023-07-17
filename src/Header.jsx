@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { LogoutLink } from "./Logout";
+import { SearchBar } from "./SearchBar";
 
 export function Header() {
   let authenticationLinks;

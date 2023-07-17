@@ -1,14 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { MovieCard } from "./MovieCard.jsx";
-import { MoviesShow } from "./MoviesShow.jsx";
 
 export function MoviesIndex(props) {
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
   const API_URL = "https://api.themoviedb.org/3";
   const BACKGROUND_IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
-  const API_KEY = "b198f69361835edbd3995238db58fcea";
+  const API_KEY = "";
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState({});
   const [searchKey, setSearchKey] = useState("");
