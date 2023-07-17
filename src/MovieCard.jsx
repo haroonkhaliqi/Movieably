@@ -2,7 +2,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-export function MoviesShow(props) {
+export function MovieCard(props) {
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
   const [isFavorite, setIsFavorite] = useState(false);
 

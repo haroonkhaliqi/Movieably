@@ -5,6 +5,7 @@ import { MoviesShow } from "./MoviesShow";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { LogoutLink } from "./Logout";
 import { Routes, Route } from "react-router-dom";
 // import { useNavigate } from "react-router-dom";
 
@@ -47,6 +48,7 @@ export function Content() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/logout" element={<LogoutLink />} />
         <Route path="/" element={<MoviesIndex movies={movies} onShowMovie={handleShowMovie} />} />
       </Routes>
       <Modal show={isMoviesShowVisible} onClose={handleClose}>

@@ -28,39 +28,17 @@ export function Header() {
       </li>
     );
   }
+
   return (
-    // <body>
-    // <div className="search-box" search-box>
-    //   <div className="search-wrapper" search-wrapper>
-    //     <input
-    //       type="text"
-    //       name="search"
-    //       aria-label="search movies"
-    //       placeholder="Search any movies..."
-    //       className="search-field"
-    //       autocomplete="off"
-    //       search-field
-    //     />
-    //     <img
-    //       src="https://w7.pngwing.com/pngs/582/430/png-transparent-search-magnifier-find-zoom-glass-seo-optimization-instagram-icon.png"
-    //       alt="search"
-    //       class="leading-icon"
-    //       width="24"
-    //       height="24"
-    //     />
-    //   </div>
-    // </div>
-    // </body>
     <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
       <div className="d-flex justify-content-end"></div>
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand fs-2" href="/">
           <img
-            src="https://png.pngtree.com/element_our/20190603/ourmid/pngtree-movie-board-icon-image_1455346.jpg"
+            src="https://versi.design/wp-content/uploads/Logo-MovieBucket.png"
             alt="Logo"
             width="50"
             height="50"
-            class="d-inline-block align-text-top"
           ></img>
           Movieably
         </a>
@@ -107,12 +85,9 @@ export function Header() {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">
-                Link
+              <a class="nav-link disabled" href="#">
+                Favorites
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
             </li>
           </ul>
         </div>
