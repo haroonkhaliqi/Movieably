@@ -7,4 +7,4 @@ Movieably has a backend in Ruby on Rails and has movie data pulled from OMDB mov
 
 <img width="1792" alt="Screen Shot 2023-07-19 at 12 09 35 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/5dafe265-86d1-4036-ac1b-2ce061844cb6">
 
-<img width="1792" alt="<img width="1792" alt="Screen Shot 2023-07-19 at 12 09 53 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/d8719ebf-96fa-49b6-8ffb-3afbdd10cb4f">">
+<img width="1792" alt="Screen Shot 2023-07-19 at 12 09 53 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/d8719ebf-96fa-49b6-8ffb-3afbdd10cb4f">
