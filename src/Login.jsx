@@ -34,18 +34,28 @@ export function Login() {
     <div className="container">
       <div className="forms-container">
         <div className="signin-signup">
-          <form action="#" className="sign-in-form">
-            <h2 className="title">Sign in</h2>
-            <div className="input-field">
-              <i className="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div className="input-field">
-              <i className="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" className="login-btn solif" />
-          </form>
+          <div id="login" className="sign-in-form">
+            <form onSubmit={handleSubmit}>
+              <h2 className="title">Sign in</h2>
+              <ul>
+                {errors.map((error) => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
+              <div className="input-field">
+                <i className="fas fa-user"></i>
+                <input name="email" type="text" placeholder="Email" />
+              </div>
+              <div className="input-field">
+                <i className="fas fa-lock"></i>
+                <input name="password" type="password" placeholder="Password" />
+              </div>
+              <button type="submit" className="login-btn solif">
+                Login
+              </button>
+              {/* <input type="submit" value="Login" className="login-btn solif" /> */}
+            </form>
+          </div>
         </div>
       </div>
 
@@ -62,7 +72,7 @@ export function Login() {
             </a>
           </div>
           <img
-            src="https://img1.picmix.com/output/stamp/normal/9/4/3/7/1767349_e8d0d.gif"
+            src="https://beyondamazingexhibition.com/assets/img/hero/hero-spiderman.bec7418a.png"
             className="image"
             id="image-drag"
             alt=""

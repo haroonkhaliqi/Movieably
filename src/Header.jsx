@@ -2,9 +2,9 @@
 /* eslint-disable no-unused-vars */
 import { Link } from "react-router-dom";
 import { LogoutLink } from "./Logout";
-import { SearchBar } from "./SearchBar";
 
 export function Header() {
+  const isLoggedIn = !!localStorage.getItem("jwt");
   let authenticationLinks;
 
   if (localStorage.jwt === undefined) {
@@ -62,9 +62,15 @@ export function Header() {
               height="24"
             />
           </div>
-          <a class="btn btn-outline-success me-2 align-self-center" href="/login">
-            Login
-          </a>
+          {isLoggedIn ? (
+            <a class="btn btn-outline-success me-2 align-self-center">
+              <LogoutLink />
+            </a>
+          ) : (
+            <a class="btn btn-outline-success me-2 align-self-center" href="/login">
+              Login
+            </a>
+          )}
 
           <button
             class="navbar-toggler"

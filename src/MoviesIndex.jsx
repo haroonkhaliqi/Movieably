@@ -6,7 +6,7 @@ export function MoviesIndex(props) {
   const baseImageUrl = "https://image.tmdb.org/t/p/original";
   const API_URL = "https://api.themoviedb.org/3";
   const BACKGROUND_IMAGE_PATH = "https://image.tmdb.org/t/p/w1280/";
-  const API_KEY = "";
+  const API_KEY = "b198f69361835edbd3995238db58fcea";
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState({});
   const [searchKey, setSearchKey] = useState("");
@@ -32,24 +32,27 @@ export function MoviesIndex(props) {
     movies.map((movie) => (
       <div key={movie.id} className="col-sm-6 col-md-4 col-lg-3 movie-card">
         <div className="card">
-          <img
-            className="card-img-top img-fluid hover"
-            src={baseImageUrl + movie.poster_path}
-            alt={movie.title}
-            onClick={() => props.onShowMovie(movie)}
-          />
-          <ul className="sci">
-            <li>
-              <a href="">happy</a>
-            </li>
-            <li>
-              <a href="">birth</a>
-            </li>
-            <li>
-              <a href="">day</a>
-            </li>
-          </ul>
-          {/* <button onClick={() => props.onShowMovie(movie)}>More Info</button> */}
+          <div className="wrapper">
+            <div className="card" onClick={() => props.onShowMovie(movie)}>
+              <img
+                className="card-img-top img-fluid hover"
+                src={baseImageUrl + movie.poster_path}
+                alt={movie.title}
+                onClick={() => props.onShowMovie(movie)}
+              />
+              <div className="descriptions">
+                <h1>{movie.title}</h1>
+                {/* <area
+                  className="image"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/1200px-Star_icon_stylized.svg.png"
+                ></area> */}
+                <span className="align-bottom">
+                  <p className="text-end">{movie.vote_average} / 10</p>
+                </span>
+              </div>
+              {/* <button onClick={() => props.onShowMovie(movie)}>More Info</button> */}
+            </div>
+          </div>
         </div>
       </div>
     ));
@@ -67,35 +70,30 @@ export function MoviesIndex(props) {
         }}
       >
         <form onSubmit={searchMovies}>
-          <input type={"text"} onChange={(e) => setSearchKey(e.target.value)} />
+          <div className="d-flex justify-content-end">
+            <div className="search-wrapper p-2" search-wrapper>
+              <input
+                type={"text"}
+                name="search"
+                aria-label="search movies"
+                placeholder="Search any movies..."
+                className="search-field"
+                autocomplete="off"
+                search-field
+                onChange={(e) => setSearchKey(e.target.value)}
+              />
+              <img
+                src="https://raw.githubusercontent.com/Shivam171/Tvflix/main/assets/images/search.png"
+                alt="search"
+                className="leading-icon"
+                width="24"
+                height="24"
+              />
+            </div>
+          </div>
         </form>
         <div id="movies-index" className="row">
           {renderMovies()}
-          {/* {props.movies.map((movie) => (
-
-            <div key={selectedMovie.id} className="col-sm-6 col-md-4 col-lg-3 movie-card">
-              <div className="card">
-                <img
-                  className="card-img-top img-fluid hover"
-                  src={baseImageUrl + selectedMovie.poster_path}
-                  alt={selectedMovie.title}
-                  onClick={() => props.onShowMovie(selectedMovie)}
-                />
-                <ul className="sci">
-                  <li>
-                    <a href="">happy</a>
-                  </li>
-                  <li>
-                    <a href="">birth</a>
-                  </li>
-                  <li>
-                    <a href="">day</a>
-                  </li>
-                </ul>
-                <button onClick={() => props.onShowMovie(movie)}>More Info</button>
-              </div>
-            </div>
-          ))} */}
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ export function MoviesShow(props) {
 
   const removeFromFavorites = () => {
     axios
-      .delete(`http://localhost:3000/favorites/${props.currentMovie.id}.json`)
+      .delete(`http://localhost:3000/favorites/${props.movie.id}.json`)
       .then(() => {
         setIsFavorite(false);
       })
@@ -39,22 +39,48 @@ export function MoviesShow(props) {
       });
   };
 
+  const TrailerLink = "https://www.youtube.com/results?search_query=" + props.movie.title + "trailer";
+  const MovieLink = "https://www.google.com/search?q=watch+" + props.movie.title;
+
   return (
-    <div>
-      <h1>{props.movie.title}</h1>
-      <h4>Directed by {props.movie.director}</h4>
-      <p>Writer: {props.movie.writer}</p>
-      {/* <img src={props.movie.poster} /> */}
-      <p>Rated {props.movie.rated}</p>
-      <p>Release Date: {props.movie.released}</p>
-      <p>Runtime: {props.movie.runtime}</p>
-      <p>Genre: {props.movie.genre}</p>
-      <p>Actors: {props.movie.actors}</p>
-      <p>Plot: {props.movie.plot}</p>
-      <p>Langauge: {props.movie.langauge}</p>
-      <p>Country: {props.movie.country}</p>
-      <p>Awards: {props.movie.awards}</p>
-      <button onClick={toggleFavorite}>{isFavorite ? "Remove from Favorites" : "Add to Favorites"}</button>
+    <div className="movie-card-container">
+      <div className="image-container">
+        <div className="bg-image" style={{ backgroundImage: `url(${baseImageUrl + props.movie.poster_path})` }} />
+      </div>
+      <div className="movie-info">
+        <div>
+          <h1>{props.movie.title}</h1>
+          <small>Released Date: {props.movie.release_date}</small>
+        </div>
+        <h4>Rating: {props.movie.vote_average} / 10</h4>
+        <p>{props.movie.overview && props.movie.overview.substr(0, 350)}</p>
+        {/* <div className="tags-container">
+          {props.movie.genre_ids && props.movie.genre_ids.split(", ").map((g) => <span>{g}</span>)}
+        </div> */}
+        {/* <button className="fav-btn" onClick={toggleFavorite}>
+          {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+        </button>
+
+        <button className="fav-btn">Where to watch</button> */}
+        {/* <div class="container"> */}
+        <div className="row align-items-center">
+          <div className="buttons">
+            <button className="one" onClick={toggleFavorite}>
+              {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+            </button>
+            <a href={TrailerLink}>
+              <button className="two">
+                Watch <b>Trailer</b>
+              </button>
+            </a>
+            <a href={MovieLink}>
+              <button className="three">
+                WhereTo <b>Watch</b>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
