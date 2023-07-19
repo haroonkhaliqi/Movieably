@@ -5,8 +5,7 @@ Movieably includes React components and has a plethora of CSS for styling and fe
 Movieably also implements router redirects to redirect to new and different pages, and to sites for like for example youtube for movie trailer.
 Movieably has a backend in Ruby on Rails and has movie data pulled from OMDB movie database. Have fun!
 
-<img src="<img width="1792" alt="Screen Shot 2023-07-19 at 12 09 35 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/5dafe265-86d1-4036-ac1b-2ce061844cb6">
-" alt="Alt text" title="Optional title">
+<img width="1792" alt="Screen Shot 2023-07-19 at 12 09 35 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/5dafe265-86d1-4036-ac1b-2ce061844cb6">
 
 <img src="![Uploading Screen Shot 2023-07-19 at 12.09.53 PM.png…]()
 " alt="Alt text" title="Optional title">
