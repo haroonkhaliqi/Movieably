@@ -1,4 +1,4 @@
-<img width="1792" alt="Screen Shot 2023-07-19 at 12 09 53 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/83c7ded7-b402-440e-aff4-306c9f566a67"><img width="1792" alt="Screen Shot 2023-07-19 at 12 09 53 PM" src="https://github.com/haroonkhaliqi/Movieably/assets/132125600/b03e7ef4-4ded-41ca-a5a2-b01eb4b5c9a4"># Movieably
+# Movieably
 Movieably is a movie app built with Javascript in React which allows users to interact with movies.
 Users are able to view the most trending movies, learn more about different movies, search for a specific movie, sign up and log in, add movies to their favorites and know where to watch the trailer and the movie.
 Movieably includes React components and has a plethora of CSS for styling and features.
